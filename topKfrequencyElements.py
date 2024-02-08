@@ -12,3 +12,23 @@
 # k is in the range [1, the number of unique elements in the array].
 # It is guaranteed that the answer is unique.
 # Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        frequencies =dict()
+        for num in nums:
+            if num in frequencies:
+                frequencies[num] += 1
+            else:
+                frequencies[num]=1
+
+
+
+        sorted_frequencies = sorted(frequencies.items(), key=lambda x: x[1], reverse=True)
+        ans=[]
+        for i in range(k):  
+            ans.append(sorted_frequencies[i][0])  
+        return ans
+
+
+            
