@@ -19,3 +19,26 @@
 # 1 <= s.length <= 2 * 105
 # s consists only of printable ASCII characters.
 
+# class Solution(object):
+def isPalindrome(s):
+    s=s.lower()
+    s=''.join(filter(str.isalnum, s))
+    if(len(s)==0):
+      return True
+# example CIVI
+    res=False
+    for left,right in zip(range(0,(len(s))), range((len(s)-1),-1,-1)):
+         if(s[left]==s[right]):
+            res=True
+         else:
+            res=False
+            return res
+    return res
+s=" "
+res=isPalindrome(s)
+print(res)
+     
+       
+
+       
+        
