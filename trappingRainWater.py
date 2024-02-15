@@ -10,7 +10,7 @@
 # Output: 9
 
 class Solution:
-    def trap(self, height)
+    def trap(self, height):
         if not height:
             return 0
 
